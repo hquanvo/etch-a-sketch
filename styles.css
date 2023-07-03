@@ -10,7 +10,14 @@ body {
     flex-wrap: wrap;
 }
 
+#container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .top-heading {
     color: #5B8FB9;
+    background-color: #03001C;
+    font-size: 48px;
     text-align: center;
 }
