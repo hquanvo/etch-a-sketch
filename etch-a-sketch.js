@@ -25,7 +25,8 @@ function createGrid(size) {
         gridElement.classList.add("grid-element");
         gridElement.style.width = (canvasLength / size) + 'px';
         gridElement.style.height = 'auto';
-        gridElement.style.border = 'solid 1px #ececec';
+        gridElement.style.borderTop = 'solid 1px #ececec';
+        gridElement.style.borderRight = 'solid 1px #ececec';
         gridElement.style.boxSizing = 'border-box';
         gridElement.addEventListener('mouseover', changeColor)
         canvas.appendChild(gridElement);    
