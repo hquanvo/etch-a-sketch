@@ -7,7 +7,7 @@ function createGrid(size) {
         gridElement.classList.add("grid-element");
         gridElement.style.width = (canvasLength / size) + 'px';
         gridElement.style.height = 'auto';
-        gridElement.style.backgroundColor = "black";
+        gridElement.style.backgroundColor = "white";
         canvas.appendChild(gridElement);
         
     }

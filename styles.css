@@ -1,7 +1,16 @@
+body {
+    background-color: #03001C;
+    font-family: roboto, 'Times New Roman', Times, serif;
+}
 #canvas {
-    background-color: blue;
+    background-color: white;
     width: 600px;
     height: 600px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.top-heading {
+    color: #5B8FB9;
+    text-align: center;
 }
