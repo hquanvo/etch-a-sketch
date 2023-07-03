@@ -1,6 +1,17 @@
-let isMouseDown = false;
-document.body.onmousedown = () => isMouseDown = true;
-document.body.onmouseup = () => isMouseDown = false;
+// buttons
+const clearBtn = document.getElementById("clear");
+const slider = document.getElementById("grid-slider");
+
+// vars
+let size = slider.value;
+
+// add listeners
+clearBtn.addEventListener('click', resetGrid);
+slider.onchange = () => {
+    size = slider.value;
+    resetGrid();
+}
+
 
 // Creates the canvas grid that contains size * size grid element
 function createGrid(size) {
@@ -8,17 +19,28 @@ function createGrid(size) {
     let canvasLength = canvas.offsetHeight;
     for (let i = 0; i < size * size; i++) {
         let gridElement = document.createElement('div');
+        gridElement.draggable = false;
         gridElement.classList.add("grid-element");
         gridElement.style.width = (canvasLength / size) + 'px';
         gridElement.style.height = 'auto';
+        gridElement.style.border = 'solid 1px #ececec';
+        gridElement.style.boxSizing = 'border-box';
         gridElement.addEventListener('mouseover', changeColor)
-        gridElement.addEventListener('mousedown', changeColor)
         canvas.appendChild(gridElement);    
     }
 }
 
 function changeColor(e) {
-    if (!isMouseDown && e.type === 'mouseover') return;
     e.target.style.backgroundColor = "black";
 }
-createGrid(24);
+
+function clearGrid() {
+    document.getElementById("canvas").innerHTML = '';
+}
+
+function resetGrid() {
+    clearGrid();
+    createGrid(size);
+}
+
+createGrid(size);

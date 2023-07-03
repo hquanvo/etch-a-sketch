@@ -15,6 +15,11 @@ body {
     justify-content: space-evenly;
 }
 
+#button-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .top-heading {
     color: #5B8FB9;
     background-color: #03001C;
