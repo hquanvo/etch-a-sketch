@@ -2,27 +2,66 @@ body {
     background-color: #03001C;
     font-family: roboto, 'Times New Roman', Times, serif;
 }
+
+button {
+    background-color: #03001C;
+    color: #5B8FB9;
+    border: solid 2px;
+    border-radius: 4px;
+    font-size: 36px;
+    font-weight: bold;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 #canvas {
-    background-color: white;
+    background-color: #bebebe;
     width: 600px;
     height: 600px;
     display: flex;
     flex-wrap: wrap;
 }
 
-#container {
+.container {
     display: flex;
     justify-content: space-evenly;
+}
+
+.canvas-container {
+    padding: 8px;
+    background-color: #43759E;
 }
 
 #button-container {
     display: flex;
     flex-direction: column;
+    border: solid 2px;
+    border-radius: 8px;
+    height: 600px;
+    width: 240px;
+    padding: 16px;
+    background-color: #43759E;
+    gap: 8px;
+}
+
+#grid-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 236px;
+    height: 15px;
+    background:  #03001C;
+    border-radius: 5px;
+}
+
+#slide-info {
+    font-size: 20px;
+    padding: 4px;
+    text-align: center;
 }
 
 .top-heading {
     color: #5B8FB9;
     background-color: #03001C;
-    font-size: 48px;
+    font-size: 56px;
     text-align: center;
 }

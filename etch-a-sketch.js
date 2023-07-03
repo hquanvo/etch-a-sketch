@@ -1,6 +1,7 @@
 // buttons
 const clearBtn = document.getElementById("clear");
 const slider = document.getElementById("grid-slider");
+const slide_info = document.getElementById("slide-info");
 
 // vars
 let size = slider.value;
@@ -11,6 +12,7 @@ slider.onchange = () => {
     size = slider.value;
     resetGrid();
 }
+slider.oninput = () => slide_info.innerHTML = "Grid size: " + slider.value + " x " + slider.value;
 
 
 // Creates the canvas grid that contains size * size grid element
