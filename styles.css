@@ -67,10 +67,28 @@ button {
     border-radius: 5px;
 }
 
+#grid-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background:#5B8FB9;
+}
+
 #slide-info {
     font-size: 20px;
     padding: 4px;
     text-align: center;
+}
+
+#filler {
+    height: 400px;
+}
+
+.active, #clear:active {
+    background-color: #5B8FB9;
+    color:#bebebe;
 }
 
 .top-heading {
